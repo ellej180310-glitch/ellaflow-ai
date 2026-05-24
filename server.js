@@ -28,7 +28,13 @@ app.get("/contact.html", (req, res) => {
 app.get("/starter.html", (req, res) => {
   res.sendFile(__dirname + "/starter.html");
 });
+app.get("/privacy.html", (req, res) => {
+  res.sendFile(__dirname + "/privacy.html");
+});
 
+app.get("/terms.html", (req, res) => {
+  res.sendFile(__dirname + "/terms.html");
+});
 app.get("/professional.html", (req, res) => {
   res.sendFile(__dirname + "/professional.html");
 });
