@@ -20,6 +20,21 @@ const client = new OpenAI({
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
+app.get("/starter.html", (req, res) => {
+  res.sendFile(__dirname + "/starter.html");
+});
+
+app.get("/professional.html", (req, res) => {
+  res.sendFile(__dirname + "/professional.html");
+});
+
+app.get("/enterprise.html", (req, res) => {
+  res.sendFile(__dirname + "/enterprise.html");
+});
+
+app.get("/success.html", (req, res) => {
+  res.sendFile(__dirname + "/success.html");
+});
 app.post("/api/chat", async (req, res) => {
   try {
     const userMessage = req.body.message;
