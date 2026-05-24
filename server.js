@@ -22,6 +22,9 @@ const client = new OpenAI({
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
+app.get("/contact.html", (req, res) => {
+  res.sendFile(__dirname + "/contact.html");
+});
 app.get("/starter.html", (req, res) => {
   res.sendFile(__dirname + "/starter.html");
 });
