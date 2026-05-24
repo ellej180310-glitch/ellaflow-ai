@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | EllaFlow AI</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fff7ed, #fdf2f8, #ecfdf5);
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 247, 237, 0.95);
+      border-bottom: 1px solid rgba(124, 58, 237, 0.18);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #7c3aed;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #7c3aed;
+      font-weight: bold;
+    }
+
+    .contact-section {
+      min-height: 90vh;
+      padding: 80px 8%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .contact-info h1 {
+      font-size: 48px;
+      color: #111827;
+      margin-bottom: 20px;
+    }
+
+    .contact-info h1 span {
+      color: #f97316;
+    }
+
+    .contact-info p {
+      color: #4b5563;
+      font-size: 18px;
+      max-width: 620px;
+      margin-bottom: 35px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-bottom: 25px;
+    }
+
+    .info-card {
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid rgba(124, 58, 237, 0.15);
+      box-shadow: 0 15px 40px rgba(124, 58, 237, 0.10);
+      transition: 0.3s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-6px);
+      border-color: #f97316;
+      box-shadow: 0 18px 45px rgba(249, 115, 22, 0.18);
+    }
+
+    .info-card h3 {
+      color: #7c3aed;
+      margin-bottom: 12px;
+    }
+
+    .info-card p,
+    .hours p {
+      color: #4b5563;
+      font-size: 16px;
+    }
+
+    .wide {
+      grid-column: span 2;
+    }
+
+    .hours {
+      margin-top: 10px;
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 20px;
+      border: 1px solid rgba(124, 58, 237, 0.15);
+      box-shadow: 0 15px 40px rgba(124, 58, 237, 0.10);
+    }
+
+    .hours h3 {
+      color: #f97316;
+      margin-bottom: 14px;
+    }
+
+    .contact-form {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 24px;
+      border-left: 5px solid #f97316;
+      box-shadow: 0 15px 45px rgba(124, 58, 237, 0.15);
+    }
+
+    .contact-form h2 {
+      color: #7c3aed;
+      font-size: 34px;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(124, 58, 237, 0.25);
+      background: #ffffff;
+      color: #1f2937;
+      font-size: 15px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #f97316;
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+    }
+
+    button {
+      padding: 16px;
+      border-radius: 10px;
+      border: none;
+      background: #f97316;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ea580c;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 8%;
+      background: #111827;
+      color: #d1d5db;
+    }
+
+    @media (max-width: 900px) {
+      .contact-section {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info h1 {
+        font-size: 38px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wide {
+        grid-column: span 1;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">EllaFlow AI</div>
+    <a href="index.html">Back to Home</a>
+  </header>
+
+  <main class="contact-section">
+    <div class="contact-info">
+      <h1>Get In <span>Touch</span></h1>
+      <p>
+        Ready to improve your business with AI, automation, and modern digital tools?
+        Contact EllaFlow AI to discuss websites, customer support automation, workflows,
+        dashboards, or custom business systems.
+      </p>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Location</h3>
+          <p>Massachusetts, USA</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Call Us</h3>
+          <p>857-930-0490</p>
+        </div>
+
+        <div class="info-card wide">
+          <h3>Email Us</h3>
+          <p>brondsisjean180310@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="hours">
+        <h3>Availability</h3>
+        <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
+        <p>Saturday: By appointment</p>
+        <p>Sunday: Closed</p>
+        <br />
+        <p>
+          Consultations are available for business websites, AI assistant setup,
+          automation planning, and custom digital solutions.
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" autocomplete="name" required />
+        <input type="email" name="email" placeholder="Your Email" autocomplete="email" required />
+        <input type="tel" name="phone" placeholder="Your Phone Number (Optional)" autocomplete="tel" />
+
+        <select name="solution" required>
+          <option value="">Select Inquiry Type</option>
+          <option>AI Customer Assistant</option>
+          <option>Website Development</option>
+          <option>Business Automation</option>
+          <option>Analytics Dashboard</option>
+          <option>Starter Plan</option>
+          <option>Professional Plan</option>
+          <option>Enterprise Consultation</option>
+          <option>Other</option>
+        </select>
+
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 EllaFlow AI | Automate Smarter. Serve Faster. Grow Stronger.</p>
+  </footer>
+
+  <script>
+    const contactForm = document.getElementById("contactForm");
+
+    contactForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const button = contactForm.querySelector("button");
+      const originalText = button.textContent;
+
+      const formData = {
+        name: contactForm.name.value.trim(),
+        email: contactForm.email.value.trim(),
+        solution: contactForm.solution.value,
+        message:
+          "Phone: " +
+          contactForm.phone.value.trim() +
+          "\\n\\n" +
+          contactForm.message.value.trim(),
+      };
+
+      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/;
+
+      if (!emailPattern.test(formData.email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      button.textContent = "Sending...";
+      button.disabled = true;
+
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          alert(data.message || "Message could not be sent.");
+          button.textContent = originalText;
+          button.disabled = false;
+          return;
+        }
+
+        window.location.href = data.redirect || "/success.html";
+      } catch (error) {
+        alert("Connection error. Please try again.");
+        button.textContent = originalText;
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
