@@ -17,6 +17,9 @@ const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
 app.post("/api/chat", async (req, res) => {
   try {
     const userMessage = req.body.message;
