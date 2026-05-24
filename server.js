@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const OpenAI = require("openai");
+const path = require("path");
 const nodemailer = require("nodemailer");
 
 dotenv.config();
@@ -12,6 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
+app.use("/image", express.static(path.join(__dirname, "image")));
 
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
