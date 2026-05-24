@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EllaFlow AI | Business Automation Platform</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #fff7ed;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 247, 237, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(124, 58, 237, 0.18);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #7c3aed;
+    }
+
+    nav a {
+      margin-left: 20px;
+      font-size: 15px;
+      color: #374151;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #f97316;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      padding: 70px 8%;
+      background: linear-gradient(135deg, #fff7ed 0%, #fdf2f8 45%, #ecfdf5 100%);
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .hero h1 span {
+      color: #f97316;
+    }
+
+    .slogan {
+      display: inline-block;
+      background: #ede9fe;
+      color: #7c3aed;
+      font-weight: 700;
+      padding: 10px 16px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(124, 58, 237, 0.18);
+    }
+
+    .hero p {
+      color: #4b5563;
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 620px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .primary {
+      background: #f97316;
+      color: white;
+      box-shadow: 0 10px 25px rgba(249, 115, 22, 0.25);
+    }
+
+    .primary:hover {
+      background: #ea580c;
+      transform: translateY(-2px);
+    }
+
+    .secondary {
+      border: 1px solid #7c3aed;
+      color: #7c3aed;
+      background: white;
+    }
+
+    .secondary:hover {
+      background: rgba(124, 58, 237, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .dashboard-card {
+      background: #ffffff;
+      color: #1f2937;
+      border: 1px solid rgba(124, 58, 237, 0.15);
+      border-radius: 24px;
+      padding: 25px;
+      box-shadow: 0 15px 40px rgba(124, 58, 237, 0.12);
+    }
+
+    .dashboard-card h3 {
+      margin-bottom: 20px;
+      color: #7c3aed;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .stat {
+      background: #f9fafb;
+      padding: 18px;
+      border-radius: 15px;
+      border: 1px solid rgba(249, 115, 22, 0.18);
+    }
+
+    .stat strong {
+      font-size: 26px;
+      color: #111827;
+    }
+
+    .stat p {
+      color: #4b5563;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 50px;
+    }
+
+    .section-title h2,
+    .demo h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .section-title p,
+    .card p,
+    .price-card p,
+    .price-card li,
+    .process-card p,
+    .support-card p,
+    .faq-item p {
+      color: #4b5563;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .card,
+    .process-card,
+    .support-card,
+    .faq-item {
+      background: #ffffff;
+      color: #1f2937;
+      border: 1px solid rgba(124, 58, 237, 0.15);
+      padding: 24px;
+      border-radius: 20px;
+      transition: 0.3s;
+      box-shadow: 0 15px 40px rgba(124, 58, 237, 0.10);
+    }
+
+    .card img,
+    .process-card img,
+    .support-card img {
+      width: 100%;
+      height: 135px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .card:hover,
+    .process-card:hover,
+    .support-card:hover,
+    .faq-item:hover {
+      transform: translateY(-6px);
+      border-color: #f97316;
+      box-shadow: 0 18px 45px rgba(249, 115, 22, 0.18);
+    }
+
+    .card h3,
+    .process-card h3,
+    .support-card h3,
+    .faq-item h3 {
+      margin-bottom: 12px;
+      color: #7c3aed;
+    }
+
+    .card p,
+    .process-card p,
+    .support-card p,
+    .faq-item p {
+      font-size: 15px;
+    }
+
+    .industries,
+    .how-it-works,
+    .faq,
+    .testimonials {
+      background: #fdf2f8;
+    }
+
+    .industry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .tag {
+      background: #ffffff;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(249, 115, 22, 0.35);
+      color: #374151;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(124, 58, 237, 0.08);
+    }
+
+    .process-grid,
+    .support-grid,
+    .faq-grid,
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: #ffffff;
+      border: 1px solid rgba(124, 58, 237, 0.15);
+      border-radius: 20px;
+      padding: 26px;
+      box-shadow: 0 15px 40px rgba(124, 58, 237, 0.10);
+      transition: 0.3s;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      border-color: #f97316;
+      box-shadow: 0 18px 45px rgba(249, 115, 22, 0.18);
+    }
+
+    .testimonial-card p {
+      color: #4b5563;
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-card strong {
+      color: #7c3aed;
+    }
+
+    .faq-item {
+      cursor: pointer;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .faq-question h3 {
+      margin-bottom: 0;
+    }
+
+    .faq-toggle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #ede9fe;
+      color: #7c3aed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, margin-top 0.35s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 220px;
+      margin-top: 14px;
+    }
+
+    .faq-item.active .faq-toggle {
+      background: #f97316;
+      color: white;
+    }
+
+    .step-number {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #f97316;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .launch-support {
+      background: linear-gradient(135deg, #fff7ed 0%, #ecfdf5 100%);
+    }
+
+    .demo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .demo p {
+      color: #4b5563;
+    }
+
+    .chatbox {
+      background: #ffffff;
+      color: #1f2937;
+      border-radius: 22px;
+      padding: 25px;
+      border: 1px solid rgba(124, 58, 237, 0.15);
+      box-shadow: 0 15px 40px rgba(124, 58, 237, 0.12);
+    }
+
+    .messages {
+      height: 280px;
+      overflow-y: auto;
+      background: #f9fafb;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 15px;
+      border: 1px solid rgba(249, 115, 22, 0.18);
+    }
+
+    .message {
+      margin-bottom: 12px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      max-width: 90%;
+      font-size: 14px;
+    }
+
+    .bot {
+      background: #ede9fe;
+      color: #1f2937;
+    }
+
+    .user {
+      background: #f97316;
+      color: white;
+      margin-left: auto;
+    }
+
+    .chat-input {
+      display: flex;
+      gap: 10px;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(124, 58, 237, 0.25);
+      outline: none;
+      background: white;
+      color: #1f2937;
+    }
+
+    .chat-input button {
+      padding: 14px 18px;
+      border: none;
+      border-radius: 10px;
+      background: #f97316;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .price-card {
+      background: #ffffff;
+      color: #1f2937;
+      padding: 32px;
+      border-radius: 20px;
+      border: 1px solid rgba(124, 58, 237, 0.15);
+      box-shadow: 0 15px 40px rgba(124, 58, 237, 0.10);
+    }
+
+    .price-card.featured {
+      border: 2px solid #f97316;
+      transform: scale(1.03);
+    }
+
+    .price {
+      font-size: 36px;
+      margin: 18px 0;
+      color: #f97316;
+      font-weight: bold;
+    }
+
+    .price-card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .price-card li {
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      background: #fdf2f8;
+    }
+
+    form {
+      max-width: 680px;
+      margin: auto;
+      display: grid;
+      gap: 15px;
+    }
+
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(124, 58, 237, 0.25);
+      background: #ffffff;
+      color: #1f2937;
+      outline: none;
+      font-size: 15px;
+    }
+
+    form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    footer {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 55px 8% 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+
+    .footer-brand h3,
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand p,
+    .footer-col p,
+    .footer-col a {
+      color: #d1d5db;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .footer-col a:hover {
+      color: #f97316;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 20px;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    .cookie-popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 420px;
+      background: #7c3aed;
+      color: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(124, 58, 237, 0.35);
+      z-index: 9999;
+    }
+
+    .cookie-popup h2 {
+      font-size: 36px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .cookie-popup p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .cookie-buttons button {
+      flex: 1;
+      padding: 16px;
+      border: none;
+      border-radius: 10px;
+      background: #f97316;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .cookie-buttons button:hover {
+      opacity: 0.9;
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.9s ease both;
+    }
+
+    .hidden {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #25D366;
+      color: white;
+      padding: 16px 20px;
+      border-radius: 999px;
+      font-weight: bold;
+      z-index: 9999;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.08);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .hero,
+      .demo {
+        grid-template-columns: 1fr;
+      }
+
+      .grid,
+      .process-grid,
+      .support-grid,
+      .faq-grid,
+      .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pricing-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .grid,
+      .stat-grid,
+      .process-grid,
+      .support-grid,
+      .faq-grid,
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      .cookie-popup {
+        width: 90%;
+        right: 5%;
+        bottom: 15px;
+      }
+
+      .cookie-popup h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">EllaFlow AI</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#process">How It Works</a>
+      <a href="#demo">AI Demo</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="fade-in">
+        <div class="slogan">Automate Smarter. Serve Faster. Grow Stronger.</div>
+        <h1>AI-Powered Automation for <span>Modern Businesses</span></h1>
+        <p>
+          EllaFlow AI helps small and growing businesses simplify operations, improve customer service,
+          automate repetitive tasks, and make faster decisions with intelligent digital tools.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#demo">Try AI Demo</a>
+          <a class="btn secondary" href="#features">Explore Features</a>
+        </div>
+      </div>
+
+      <div class="dashboard-card fade-in">
+        <h3>Business Automation Dashboard</h3>
+        <div class="stat-grid">
+          <div class="stat">
+            <strong>42%</strong>
+            <p>Less manual work</p>
+          </div>
+          <div class="stat">
+            <strong>24/7</strong>
+            <p>AI customer support</p>
+          </div>
+          <div class="stat">
+            <strong>3x</strong>
+            <p>Faster response time</p>
+          </div>
+          <div class="stat">
+            <strong>98%</strong>
+            <p>Organized workflows</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="section-title fade-in">
+        <h2>Business Tools Built for Growth</h2>
+        <p>
+          EllaFlow AI combines automation, digital workflows, and intelligent assistance to help businesses operate more efficiently.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card fade-in">
+          <img src="image/custom-experience.png" alt="AI Customer Assistant" />
+          <h3>AI Customer Assistant</h3>
+          <p>Answer common customer questions, guide users, and provide instant support through an AI-powered assistant.</p>
+        </div>
+
+        <div class="card fade-in">
+          <img src="image/smart-scheduling.avif" alt="Smart Scheduling" />
+          <h3>Smart Scheduling</h3>
+          <p>Automate appointments, reminders, follow-ups, and business workflows to save time and reduce missed opportunities.</p>
+        </div>
+
+        <div class="card fade-in">
+          <img src="image/analytics-dashboard.webp" alt="Analytics Dashboard" />
+          <h3>Analytics Dashboard</h3>
+          <p>Track performance, customer activity, requests, and business trends using clear visual reporting tools.</p>
+        </div>
+
+        <div class="card fade-in">
+          <img src="image/workflow.webp" alt="Workflow Automation" />
+          <h3>Workflow Automation</h3>
+          <p>Reduce repetitive tasks by creating automated systems for messages, forms, reports, and internal operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="how-it-works">
+      <div class="section-title fade-in">
+        <h2>How It Works</h2>
+        <p>
+          EllaFlow AI follows a clear process so businesses understand what is being built, why it matters, and how it supports growth.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card fade-in">
+          <div class="step-number">1</div>
+          <h3>Consultation</h3>
+          <p>We begin by understanding your business, customers, current challenges, and the tasks you want to improve or automate.</p>
+        </div>
+
+        <div class="process-card fade-in">
+          <div class="step-number">2</div>
+          <h3>Strategy & Planning</h3>
+          <p>A simple project plan is created to define the website structure, automation goals, AI features, timeline, and expected outcome.</p>
+        </div>
+
+        <div class="process-card fade-in">
+          <div class="step-number">3</div>
+          <h3>Design & Development</h3>
+          <p>The solution is designed with a clean interface, responsive layout, business functionality, and features that match your workflow.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="launch" class="launch-support">
+      <div class="section-title fade-in">
+        <h2>Launch & Support</h2>
+        <p>
+          Building the system is only one part of the process. EllaFlow AI also focuses on testing, deployment, and continued improvement.
+        </p>
+      </div>
+
+      <div class="support-grid">
+        <div class="support-card fade-in">
+          <h3>Testing Before Launch</h3>
+          <p>Forms, chatbot responses, page links, mobile layout, and user flow are tested before the website is presented or published.</p>
+        </div>
+
+        <div class="support-card fade-in">
+          <h3>Launch Preparation</h3>
+          <p>The website can be prepared for hosting, domain connection, email setup, analytics, and future payment integration.</p>
+        </div>
+
+        <div class="support-card fade-in">
+          <h3>Ongoing Improvements</h3>
+          <p>As business needs grow, new features can be added such as customer dashboards, payment systems, databases, and advanced AI tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="industries" class="industries">
+      <div class="section-title fade-in">
+        <h2>Designed for Many Industries</h2>
+        <p>
+          EllaFlow AI can support different businesses that need better communication, organization, and digital transformation.
+        </p>
+      </div>
+
+      <div class="industry-tags">
+        <div class="tag">Healthcare Offices</div>
+        <div class="tag">Restaurants</div>
+        <div class="tag">Ecommerce Stores</div>
+        <div class="tag">IT Services</div>
+        <div class="tag">Real Estate</div>
+        <div class="tag">Local Small Businesses</div>
+      </div>
+    </section>
+
+    <section id="demo">
+      <div class="demo">
+        <div class="fade-in">
+          <h2>Interactive AI Assistant Demo</h2>
+          <p style="margin: 18px 0;">
+            This prototype demonstrates how an AI assistant can help businesses answer questions,
+            explain services, recommend automation ideas, and improve customer support.
+          </p>
+        </div>
+
+        <div class="chatbox fade-in">
+          <div class="messages" id="messages">
+            <div class="message bot">Hello! I'm EllaFlow AI. Ask me how automation can help your business.</div>
+          </div>
+          <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Ask about automation, support, pricing..." autocomplete="off" />
+            <button id="sendBtn" type="button">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="section-title fade-in">
+        <h2>Simple Business Pricing</h2>
+        <p>
+          Flexible packages designed for businesses that want to start small and scale as their needs grow.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card fade-in">
+          <h3>Starter</h3>
+          <div class="price">$499</div>
+          <p>For businesses that need a simple digital foundation.</p>
+          <ul>
+            <li>✓ Business landing page</li>
+            <li>✓ Basic contact form</li>
+            <li>✓ Mobile responsive design</li>
+            <li>✓ Basic SEO setup</li>
+          </ul>
+          <a class="btn secondary" href="starter.html" target="_blank">Get Started</a>
+        </div>
+
+        <div class="price-card featured fade-in">
+          <h3>Professional</h3>
+          <div class="price">$1,500</div>
+          <p>For growing businesses that need automation and better workflows.</p>
+          <ul>
+            <li>✓ Multi-page website</li>
+            <li>✓ AI assistant prototype</li>
+            <li>✓ Booking or inquiry system</li>
+            <li>✓ Dashboard concept</li>
+          </ul>
+          <a class="btn primary" href="professional.html" target="_blank">Choose Plan</a>
+        </div>
+
+        <div class="price-card fade-in">
+          <h3>Enterprise</h3>
+          <div class="price">Custom</div>
+          <p>For companies that need custom systems and advanced integrations.</p>
+          <ul>
+            <li>✓ Custom automation workflows</li>
+            <li>✓ AI API integration</li>
+            <li>✓ Database-driven systems</li>
+            <li>✓ Ongoing support options</li>
+          </ul>
+          <a class="btn secondary" href="enterprise.html" target="_blank">Request Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <div class="section-title fade-in">
+        <h2>Built for Real Business Needs</h2>
+        <p>
+          EllaFlow AI is designed around practical business challenges: faster communication, better organization,
+          smarter customer support, and digital systems that can grow over time.
+        </p>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card fade-in">
+          <p>“The automation concept shows exactly what small businesses need: faster responses, cleaner workflows, and less manual work.”</p>
+          <strong>Small Business Owner</strong>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <p>“The AI assistant gives the website a modern feel and helps explain services in a way customers can understand quickly.”</p>
+          <strong>Technology Consultant</strong>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <p>“The pricing pages and contact workflow make the platform feel like a real business solution, not just a static website.”</p>
+          <strong>Startup Founder</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="section-title fade-in">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Clear answers to common questions about websites, AI automation, project timelines, support, and future upgrades.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <h3>How long does a project take?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Simple websites may take a few days to two weeks. Larger projects with AI, automation, dashboards, or custom systems may take longer depending on complexity.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <h3>Can AI be added to an existing website?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. AI assistants, contact automation, customer support tools, and workflow features can be integrated into existing websites depending on the platform.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <h3>Do you offer support after launch?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. Support can include testing, updates, troubleshooting, email setup, hosting guidance, and future feature improvements.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <h3>Can I upgrade later?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. A business can start with a basic website and later add automation, AI chat, payments, dashboards, databases, and customer portals.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <h3>Is payment built into this website?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>The site is ready for payment integration. A secure provider like Stripe should be used so card numbers, CVV, and billing details are handled safely.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <h3>What makes EllaFlow AI different?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>EllaFlow AI focuses on practical business tools: websites, automation, AI support, lead capture, customer communication, and scalable digital workflows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="section-title fade-in">
+        <h2>Request a Business Automation Consultation</h2>
+        <p>
+          Tell us about your business needs and discover how AI and automation can improve your operations.
+        </p>
+      </div>
+
+      <form id="contactForm" class="fade-in">
+        <input type="text" name="name" placeholder="Full Name" autocomplete="name" required />
+        <input type="email" name="email" placeholder="Email Address" autocomplete="email" required />
+        <select name="solution" autocomplete="off" required>
+          <option value="">What solution are you interested in?</option>
+          <option>AI Customer Assistant</option>
+          <option>Website Development</option>
+          <option>Business Automation</option>
+          <option>Analytics Dashboard</option>
+          <option>Custom System</option>
+        </select>
+        <textarea name="message" placeholder="Tell us about your business or project idea..." autocomplete="off" required></textarea>
+        <button class="btn primary" type="submit">Submit Request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>EllaFlow AI</h3>
+        <p>Automate Smarter. Serve Faster. Grow Stronger.</p>
+        <p>AI-powered websites, automation systems, and digital solutions for growing businesses.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Phone: 857-930-0490</p>
+        <p>Email: brondsisjean180310@gmail.com</p>
+        <p>Location: Massachusetts, USA</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#features">AI Automation</a>
+        <a href="#pricing">Website Packages</a>
+        <a href="#demo">AI Assistant Demo</a>
+        <a href="#contact">Business Consultation</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#process">How It Works</a>
+        <a href="#launch">Launch & Support</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="starter.html" target="_blank">Starter Plan</a>
+        <a href="professional.html" target="_blank">Professional Plan</a>
+        <a href="enterprise.html" target="_blank">Enterprise Plan</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 EllaFlow AI. Business automation concept website created as a frontend prototype.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/18579300490" class="whatsapp-btn" target="_blank">Chat on WhatsApp</a>
+
+  <div id="cookiePopup" class="cookie-popup">
+    <h2>This website uses cookies.</h2>
+    <p>
+      We use cookies to enhance your browsing experience, improve website functionality,
+      and better understand how visitors interact with our platform. By continuing to use this website,
+      you agree to our use of cookies and related technologies.
+    </p>
+    <div class="cookie-buttons">
+      <button type="button" onclick="declineCookies()">Decline</button>
+      <button type="button" onclick="acceptCookies()">Accept</button>
+    </div>
+  </div>
+
+  <script>
+    const contactForm = document.getElementById("contactForm");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+
+        const formData = {
+          name: contactForm.name.value.trim(),
+          email: contactForm.email.value.trim(),
+          solution: contactForm.solution.value,
+          message: contactForm.message.value.trim(),
+        };
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+        if (!emailPattern.test(formData.email)) {
+          alert("Please enter a correct email address.");
+          return;
+        }
+
+        submitBtn.textContent = "Sending...";
+        submitBtn.disabled = true;
+
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+
+          const data = await response.json();
+
+          if (!response.ok) {
+            alert(data.message || "Request could not be sent.");
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            return;
+          }
+
+          window.location.href = data.redirect || "/success.html";
+        } catch (error) {
+          alert("Connection error. Please try again.");
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      });
+    }
+
+    const input = document.getElementById("userInput");
+    const messages = document.getElementById("messages");
+    const sendBtn = document.getElementById("sendBtn");
+
+    async function sendMessage() {
+      const text = input.value.trim();
+
+      if (text === "") return;
+
+      const userMessage = document.createElement("div");
+      userMessage.className = "message user";
+      userMessage.textContent = text;
+      messages.appendChild(userMessage);
+
+      input.value = "";
+
+      const botMessage = document.createElement("div");
+      botMessage.className = "message bot";
+      botMessage.textContent = "EllaFlow AI is thinking...";
+      messages.appendChild(botMessage);
+
+      messages.scrollTop = messages.scrollHeight;
+
+      try {
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ message: text })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          botMessage.textContent = data.reply || "AI server returned an error.";
+          return;
+        }
+
+        botMessage.textContent = data.reply;
+      } catch (error) {
+        console.error("Frontend error:", error);
+        botMessage.textContent = "Connection error with AI server.";
+      }
+
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    sendBtn.addEventListener("click", sendMessage);
+
+    input.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        sendMessage();
+      }
+    });
+function acceptCookies() {
+  document.getElementById("cookiePopup").style.display = "none";
+  localStorage.setItem("ellaFlowCookies", "accepted");
+}
+
+function declineCookies() {
+  document.getElementById("cookiePopup").style.display = "none";
+  localStorage.setItem("ellaFlowCookies", "declined");
+}
+
+window.addEventListener("load", function () {
+  const cookieChoice = localStorage.getItem("ellaFlowCookies");
+
+  if (cookieChoice === "accepted" || cookieChoice === "declined") {
+    document.getElementById("cookiePopup").style.display = "none";
+  }
+});
+
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        faqItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+            const otherToggle = otherItem.querySelector(".faq-toggle");
+            if (otherToggle) otherToggle.textContent = "+";
+          }
+        });
+
+        item.classList.toggle("active");
+        const toggle = item.querySelector(".faq-toggle");
+        if (toggle) {
+          toggle.textContent = item.classList.contains("active") ? "−" : "+";
+        }
+      });
+    });
+
+    const animatedElements = document.querySelectorAll(".fade-in");
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    animatedElements.forEach((element) => {
+      element.classList.add("hidden");
+      revealObserver.observe(element);
+    });
+  </script>
+</body>
+</html>

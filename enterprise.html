@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise Solutions | EllaFlow AI</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #111827, #1f2937, #312e81);
+      color: white;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(17, 24, 39, 0.95);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f97316;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #e5e7eb;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 100px 8%;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.15);
+      color: #f97316;
+      padding: 10px 18px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      border: 1px solid rgba(249,115,22,0.3);
+    }
+
+    h1 {
+      font-size: 58px;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      color: #d1d5db;
+      font-size: 20px;
+    }
+
+    .price {
+      margin-top: 25px;
+      font-size: 42px;
+      color: #f97316;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 32px;
+      transition: 0.35s ease;
+      backdrop-filter: blur(12px);
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(249,115,22,0.4);
+      box-shadow: 0 20px 50px rgba(249,115,22,0.18);
+    }
+
+    .card h2,
+    .card h3 {
+      color: #f97316;
+      margin-bottom: 16px;
+    }
+
+    .card p,
+    .card li {
+      color: #d1d5db;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .dark-section {
+      background: rgba(255,255,255,0.03);
+    }
+
+    .cta {
+      text-align: center;
+      padding: 90px 8%;
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      color: #d1d5db;
+      max-width: 760px;
+      margin: auto;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 26px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      margin: 8px;
+    }
+
+    .primary {
+      background: #f97316;
+      color: white;
+      box-shadow: 0 10px 30px rgba(249,115,22,0.25);
+    }
+
+    .secondary {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    footer {
+      padding: 35px 8%;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #9ca3af;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 950px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">EllaFlow AI</div>
+    <a href="index.html">Back to Home</a>
+  </header>
+
+  <section class="hero">
+    <div class="badge">Enterprise Solutions</div>
+
+    <h1>Custom AI & Automation Infrastructure For Serious Businesses</h1>
+
+    <p>
+      The Enterprise plan is designed for companies that require scalable systems,
+      advanced automation, custom integrations, AI workflows, secure business tools,
+      and long-term digital transformation solutions.
+    </p>
+
+    <div class="price">Custom Pricing</div>
+  </section>
+
+  <section>
+    <div class="grid">
+
+      <div class="card">
+        <h2>Enterprise Features</h2>
+
+        <ul>
+          <li>✓ Custom business platforms</li>
+          <li>✓ AI workflow automation</li>
+          <li>✓ Database systems</li>
+          <li>✓ Secure admin dashboards</li>
+          <li>✓ Multi-user access systems</li>
+          <li>✓ Advanced API integrations</li>
+          <li>✓ Internal business tools</li>
+          <li>✓ Long-term scalability planning</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Ideal For</h2>
+
+        <p>
+          Enterprise solutions are ideal for organizations, growing companies,
+          service providers, agencies, startups, logistics operations,
+          healthcare systems, IT firms, and businesses handling large workflows.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Built Around Your Business</h2>
+
+        <p>
+          Every enterprise solution is custom-designed around your goals,
+          workflow structure, customer process, automation needs,
+          security requirements, and operational growth strategy.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="dark-section">
+    <div class="grid">
+
+      <div class="card">
+        <h3>1. Consultation & Discovery</h3>
+
+        <p>
+          We begin by understanding your operations, challenges,
+          workflow bottlenecks, and areas where AI or automation
+          can improve efficiency and performance.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>2. Architecture & Planning</h3>
+
+        <p>
+          We design the system structure, user flow,
+          backend organization, security layers,
+          integrations, dashboards, and automation logic.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>3. Development & Integration</h3>
+
+        <p>
+          The platform is developed with scalability,
+          responsiveness, security, and business performance in mind,
+          including AI integrations and backend systems.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="grid">
+
+      <div class="card">
+        <h2>Possible Enterprise Systems</h2>
+
+        <ul>
+          <li>✓ AI customer support systems</li>
+          <li>✓ Business management dashboards</li>
+          <li>✓ CRM platforms</li>
+          <li>✓ Internal workflow systems</li>
+          <li>✓ Employee management systems</li>
+          <li>✓ Analytics and reporting tools</li>
+          <li>✓ Secure login & permissions</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Security & Scalability</h2>
+
+        <p>
+          Enterprise solutions are planned with future expansion in mind.
+          The structure supports higher traffic, more users,
+          additional automation layers, and stronger operational control.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Long-Term Support</h2>
+
+        <p>
+          Ongoing support, maintenance, feature updates,
+          optimization, troubleshooting, and future system expansion
+          can be discussed as part of enterprise agreements.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="dark-section">
+    <div class="grid">
+
+      <div class="card">
+        <h2>Expected Timeline</h2>
+
+        <p>
+          Enterprise projects vary based on system complexity,
+          integrations, features, databases, user management,
+          automation workflows, and business requirements.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Custom Pricing Model</h2>
+
+        <p>
+          Enterprise pricing depends on project size,
+          development scope, integrations,
+          AI functionality, security needs,
+          and long-term support requirements.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Professional Collaboration</h2>
+
+        <p>
+          Projects are developed through planning,
+          communication, testing, revisions,
+          deployment preparation, and launch support.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta">
+
+    <h2>Ready To Build A Powerful Business System?</h2>
+
+    <p>
+      The Enterprise plan is designed for organizations that need more than a website.
+      It is built for businesses looking to modernize operations,
+      automate workflows, integrate AI, and scale professionally.
+    </p>
+
+    <a class="btn primary" href="index.html#contact">Schedule Consultation</a>
+
+    <a class="btn secondary" href="index.html#pricing">Back to Pricing</a>
+
+  </section>
+
+  <footer>
+    <p>
+      © 2025 EllaFlow AI | Business Automation & AI Solutions
+      <br><br>
+      Phone: 857-930-0490 |
+      Email: brondsisjean180310@gmail.com
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "ellaflow-ai",
+  "version": "1.0.0",
+  "description": "Minimal local README for running the EllaFlow AI prototype.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "nodemailer": "^6.10.1",
+    "openai": "^6.39.0"
+  }
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Plan | EllaFlow AI</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fff7ed, #fdf2f8, #ecfdf5);
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 247, 237, 0.95);
+      border-bottom: 1px solid rgba(124, 58, 237, 0.18);
+    }
+
+    .logo {
+      color: #7c3aed;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    header a {
+      color: #7c3aed;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 85px 8%;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ede9fe;
+      color: #7c3aed;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+
+    .price {
+      font-size: 44px;
+      color: #f97316;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .hero p {
+      max-width: 780px;
+      margin: auto;
+      color: #4b5563;
+      font-size: 18px;
+    }
+
+    section {
+      padding: 55px 8%;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 24px;
+      border: 1px solid rgba(124, 58, 237, 0.15);
+      box-shadow: 0 15px 40px rgba(124, 58, 237, 0.10);
+      transition: 0.35s ease;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #f97316;
+      box-shadow: 0 20px 50px rgba(249, 115, 22, 0.18);
+    }
+
+    .card h2,
+    .card h3 {
+      color: #7c3aed;
+      margin-bottom: 14px;
+    }
+
+    .card p,
+    .card li {
+      color: #4b5563;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .highlight {
+      background: #fdf2f8;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 75px 8%;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px;
+      transition: 0.3s;
+    }
+
+    .primary {
+      background: #f97316;
+      color: white;
+      box-shadow: 0 10px 25px rgba(249, 115, 22, 0.25);
+    }
+
+    .secondary {
+      background: white;
+      border: 1px solid #7c3aed;
+      color: #7c3aed;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      background: #111827;
+      color: #d1d5db;
+      padding: 30px 8%;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">EllaFlow AI</div>
+    <a href="index.html">Back to Home</a>
+  </header>
+
+  <section class="hero">
+    <div class="badge">Professional Plan</div>
+    <h1>Automation, AI, and a More Powerful Business Website</h1>
+    <p>
+      The Professional Plan is designed for growing businesses that need more than a basic website.
+      This package focuses on better customer interaction, automation, AI support, lead capture,
+      booking workflows, and a stronger digital system for business operations.
+    </p>
+  </section>
+
+  <section>
+    <div class="grid">
+      <div class="card">
+        <h2>What’s Included</h2>
+        <ul>
+          <li>✓ Multi-page professional website</li>
+          <li>✓ AI assistant prototype or integration</li>
+          <li>✓ Booking or inquiry workflow</li>
+          <li>✓ Advanced contact and lead forms</li>
+          <li>✓ Mobile and tablet optimization</li>
+          <li>✓ SEO-friendly structure</li>
+          <li>✓ Professional UI/UX layout</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Business Value</h2>
+        <p>
+          This plan helps businesses move from a simple online presence to a smarter digital platform.
+          It improves how customers ask questions, submit requests, schedule services, and interact with your business.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Best For</h2>
+        <p>
+          This plan is best for growing companies, consultants, agencies, service providers,
+          ecommerce brands, and businesses that want automation and AI features built into their website.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    <div class="grid">
+      <div class="card">
+        <h3>1. Strategy Session</h3>
+        <p>
+          We review your business goals, customer journey, service process, and areas where automation or AI can reduce manual work.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>2. System Design</h3>
+        <p>
+          The website structure, AI assistant flow, forms, booking process, and user experience are planned before development begins.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>3. Development</h3>
+        <p>
+          The platform is built with responsive design, smart forms, interactive sections, automation-ready structure, and backend support if needed.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid">
+      <div class="card">
+        <h2>What to Expect</h2>
+        <p>
+          You can expect a more advanced website experience that feels professional, interactive, and business-focused.
+          The goal is not only to display information, but to help visitors take action.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Possible Features</h2>
+        <ul>
+          <li>✓ AI chatbot assistant</li>
+          <li>✓ Appointment request system</li>
+          <li>✓ Lead capture forms</li>
+          <li>✓ Service inquiry workflow</li>
+          <li>✓ Basic dashboard concept</li>
+          <li>✓ Email notification system</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Estimated Timeline</h2>
+        <p>
+          Most Professional projects take approximately 2–4 weeks depending on features,
+          revisions, content readiness, AI integration level, and requested functionality.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    <div class="grid">
+      <div class="card">
+        <h2>Client Provides</h2>
+        <ul>
+          <li>✓ Business details and service information</li>
+          <li>✓ Branding or color preferences</li>
+          <li>✓ Content, photos, or examples if available</li>
+          <li>✓ Desired automation or AI goals</li>
+          <li>✓ Contact and booking requirements</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Support Included</h2>
+        <p>
+          Basic post-launch support may include small updates, testing, form checks, link checks,
+          and guidance for hosting, domain setup, or future improvements.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Future Expansion</h2>
+        <p>
+          This plan can later expand into online payments, customer accounts, dashboards,
+          databases, CRM tools, advanced AI automation, or admin panels.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Build a Smarter Business Website?</h2>
+    <p>
+      Choose the Professional Plan when your business needs more interaction, automation, and customer-focused tools.
+    </p>
+    <a class="btn primary" href="index.html#contact">Request This Plan</a>
+    <a class="btn secondary" href="index.html#pricing">Back to Pricing</a>
+  </section>
+
+  <footer>
+    <p>© 2025 EllaFlow AI | Phone: 857-930-0490 | Email: brondsisjean180310@gmail.com</p>
+  </footer>
+</body>
+</html>
