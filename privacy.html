@@ -26,6 +26,10 @@ justify-content:space-between;
 align-items:center;
 background:rgba(255,247,237,0.95);
 border-bottom:1px solid rgba(124,58,237,0.18);
+position:sticky;
+top:0;
+z-index:1000;
+backdrop-filter:blur(10px);
 }
 
 .logo{
@@ -46,10 +50,19 @@ margin:auto;
 padding:80px 8%;
 }
 
+.card{
+background:white;
+padding:45px;
+border-radius:24px;
+box-shadow:0 15px 40px rgba(124,58,237,0.10);
+border:1px solid rgba(124,58,237,0.15);
+}
+
 h1{
 font-size:52px;
 margin-bottom:25px;
 color:#111827;
+line-height:1.1;
 }
 
 h1 span{
@@ -67,19 +80,34 @@ margin-bottom:18px;
 color:#4b5563;
 }
 
-.card{
-background:white;
-padding:40px;
-border-radius:24px;
-box-shadow:0 15px 40px rgba(124,58,237,0.10);
-border:1px solid rgba(124,58,237,0.15);
-}
-
 footer{
 text-align:center;
-padding:28px;
+padding:32px 8%;
 background:#111827;
 color:#d1d5db;
+}
+
+footer a{
+color:#7c3aed;
+font-weight:bold;
+text-decoration:none;
+}
+
+@media (max-width:700px){
+
+h1{
+font-size:38px;
+}
+
+.card{
+padding:30px;
+}
+
+header{
+flex-direction:column;
+gap:12px;
+}
+
 }
 </style>
 </head>
@@ -92,81 +120,130 @@ color:#d1d5db;
 </header>
 
 <div class="container">
+
 <div class="card">
 
 <h1>Privacy <span>Policy</span></h1>
 
 <p>
-EllaFlow AI respects your privacy and is committed to protecting any information shared through this website.
+EllaFlow AI values your privacy and is committed to protecting information shared through our AI automation platform, consultation forms, workflow systems, and digital business services.
 </p>
 
 <h2>Information We Collect</h2>
 
 <p>
-We may collect your name, email address, phone number, and project details when you submit contact forms or request consultations.
+We may collect your name, email address, phone number, company details, workflow information, project requests, automation goals, and communication details when you contact us or request services.
 </p>
 
-<h2>How We Use Information</h2>
+<h2>How Information Is Used</h2>
 
 <p>
-Your information is used only to respond to inquiries, improve customer support, and provide requested business services.
+Information may be used to:
+</p>
+
+<p>
+• Respond to consultation requests
+<br>
+• Improve customer communication
+<br>
+• Design automation systems and workflows
+<br>
+• Provide AI-powered business solutions
+<br>
+• Improve operational support and platform functionality
+</p>
+
+<h2>AI & Automation Services</h2>
+
+<p>
+Some EllaFlow AI services may involve automation workflows, AI integrations, smart forms, customer communication systems, or operational dashboards. Information submitted through these systems may be processed to improve workflow functionality and customer support experiences.
 </p>
 
 <h2>Data Protection</h2>
 
 <p>
-We implement reasonable security measures to help protect your information from unauthorized access or disclosure.
+We implement reasonable technical and organizational measures to help protect information from unauthorized access, misuse, disclosure, or loss.
 </p>
 
 <h2>Third-Party Services</h2>
 
 <p>
-Our website may use third-party tools such as analytics platforms, hosting providers, maps, or payment processors.
+EllaFlow AI may use third-party tools and providers including hosting platforms, analytics services, maps, communication systems, payment processors, AI APIs, or cloud infrastructure providers to support business operations.
 </p>
 
-<h2>Cookies</h2>
+<h2>Cookies & Analytics</h2>
 
 <p>
-Cookies may be used to improve browsing experience, website functionality, and performance analysis.
+Cookies and analytics technologies may be used to improve website functionality, monitor performance, understand visitor behavior, and enhance user experience.
 </p>
 
-<h2>Contact</h2>
+<h2>External Links</h2>
 
 <p>
-For privacy-related questions, contact:
+Our website may contain links to third-party platforms or services. EllaFlow AI is not responsible for the privacy practices or external content of third-party websites.
+</p>
+
+<h2>Policy Updates</h2>
+
+<p>
+This Privacy Policy may be updated periodically to reflect service improvements, operational changes, or legal requirements.
+</p>
+
+<h2>Contact Information</h2>
+
+<p>
+For privacy-related questions or requests, contact:
 <br><br>
+
+EllaFlow AI
+<br>
+Boston, Massachusetts, USA
+<br><br>
+
 Email: brondsisjean180310@gmail.com
 <br>
 Phone: 857-930-0490
 </p>
 
 </div>
+
 </div>
 
 <footer>
-  <div style="
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-    margin-bottom:15px;
-  ">
-    <a href="privacy.html" style="color:#7c3aed; font-weight:bold;">
-      Privacy Policy
-    </a>
 
-    <a href="terms.html" style="color:#7c3aed; font-weight:bold;">
-      Terms of Service
-    </a>
+<div style="
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-bottom:15px;
+">
 
-    <a href="contact.html" style="color:#7c3aed; font-weight:bold;">
-      Contact
-    </a>
-  </div>
+<a href="privacy.html">
+Privacy Policy
+</a>
 
-  <p>
-    © 2025 EllaFlow AI | Automate Smarter. Serve Faster. Grow Stronger.
-  </p>
+<a href="terms.html">
+Terms of Service
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+<p style="margin-top:15px; color:#9ca3af;">
+AI automation systems, intelligent workflows, digital operations,
+and business solutions designed to improve efficiency and growth.
+</p>
+
+<br>
+
+<p>
+© 2025 EllaFlow AI | Automate Smarter. Serve Faster. Grow Stronger.
+</p>
+
 </footer>
 
 </body>
