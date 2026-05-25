@@ -1238,12 +1238,25 @@
     });
 
     function acceptCookies() {
-      document.getElementById("cookiePopup").style.display = "none";
-    }
+  const popup = document.getElementById("cookiePopup");
+  popup.style.display = "none";
+  localStorage.setItem("ellaFlowCookies", "accepted");
+}
 
-    function declineCookies() {
-      document.getElementById("cookiePopup").style.display = "none";
-    }
+function declineCookies() {
+  const popup = document.getElementById("cookiePopup");
+  popup.style.display = "none";
+  localStorage.setItem("ellaFlowCookies", "declined");
+}
+
+window.addEventListener("load", function () {
+  const cookieChoice = localStorage.getItem("ellaFlowCookies");
+  const popup = document.getElementById("cookiePopup");
+
+  if (cookieChoice === "accepted" || cookieChoice === "declined") {
+    popup.style.display = "none";
+  }
+});
 
     const faqItems = document.querySelectorAll(".faq-item");
 
