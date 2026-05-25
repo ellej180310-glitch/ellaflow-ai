@@ -26,6 +26,10 @@ justify-content:space-between;
 align-items:center;
 background:rgba(255,247,237,0.95);
 border-bottom:1px solid rgba(124,58,237,0.18);
+position:sticky;
+top:0;
+z-index:1000;
+backdrop-filter:blur(10px);
 }
 
 .logo{
@@ -48,7 +52,7 @@ padding:80px 8%;
 
 .card{
 background:white;
-padding:40px;
+padding:45px;
 border-radius:24px;
 box-shadow:0 15px 40px rgba(124,58,237,0.10);
 border:1px solid rgba(124,58,237,0.15);
@@ -58,6 +62,7 @@ h1{
 font-size:52px;
 margin-bottom:25px;
 color:#111827;
+line-height:1.1;
 }
 
 h1 span{
@@ -77,9 +82,32 @@ color:#4b5563;
 
 footer{
 text-align:center;
-padding:28px;
+padding:32px 8%;
 background:#111827;
 color:#d1d5db;
+}
+
+footer a{
+color:#7c3aed;
+font-weight:bold;
+text-decoration:none;
+}
+
+@media (max-width:700px){
+
+h1{
+font-size:38px;
+}
+
+.card{
+padding:30px;
+}
+
+header{
+flex-direction:column;
+gap:12px;
+}
+
 }
 </style>
 </head>
@@ -92,85 +120,124 @@ color:#d1d5db;
 </header>
 
 <div class="container">
+
 <div class="card">
 
 <h1>Terms of <span>Service</span></h1>
 
 <p>
-By using EllaFlow AI services and this website, you agree to the following terms and conditions.
+By accessing or using EllaFlow AI services, platforms, workflows, automation systems, or digital business solutions, you agree to the following terms and conditions.
 </p>
 
-<h2>Services</h2>
+<h2>Services Provided</h2>
 
 <p>
-EllaFlow AI provides business automation, website development, AI integration concepts, workflow systems, and digital consulting services.
+EllaFlow AI provides AI automation systems, workflow optimization tools, digital business platforms, intelligent communication systems, operational dashboards, automation consulting, integrations, and custom digital solutions.
+</p>
+
+<h2>Consultations & Project Scope</h2>
+
+<p>
+Project scope, automation requirements, integrations, timelines, features, and deliverables may vary depending on operational complexity, requested functionality, revisions, and business needs.
 </p>
 
 <h2>Client Responsibilities</h2>
 
 <p>
-Clients are responsible for providing accurate project information, communication, and approvals during development processes.
+Clients are responsible for providing accurate information, workflow details, communication, approvals, operational requirements, branding assets, and project feedback necessary for development.
 </p>
 
-<h2>Payments</h2>
+<h2>AI & Automation Systems</h2>
 
 <p>
-Pricing and project payments may vary depending on project scope, features, revisions, and timelines.
+Some EllaFlow AI services may include AI integrations, automated workflows, customer communication systems, dashboards, smart forms, operational management tools, or third-party automation services. Performance may vary depending on usage, infrastructure, integrations, and external platforms.
+</p>
+
+<h2>Payments & Pricing</h2>
+
+<p>
+Pricing varies depending on project scope, automation complexity, AI integrations, operational requirements, revisions, scalability, infrastructure, and ongoing support needs.
 </p>
 
 <h2>Intellectual Property</h2>
 
 <p>
-All custom work remains property of EllaFlow AI until final payment is completed unless otherwise agreed in writing.
+Custom systems, workflows, automation structures, designs, code, and business solutions remain property of EllaFlow AI until full payment is completed unless otherwise agreed in writing.
+</p>
+
+<h2>Third-Party Platforms</h2>
+
+<p>
+EllaFlow AI may use third-party providers, APIs, cloud platforms, communication systems, hosting services, analytics providers, or external integrations to support functionality and operations.
 </p>
 
 <h2>Limitation of Liability</h2>
 
 <p>
-EllaFlow AI is not responsible for indirect damages, business interruptions, or losses caused by third-party platforms or external services.
+EllaFlow AI is not responsible for indirect damages, business interruption, operational loss, third-party service failures, API limitations, infrastructure outages, or issues caused by external platforms.
 </p>
 
-<h2>Changes to Terms</h2>
+<h2>Future Modifications</h2>
 
 <p>
-These terms may be updated periodically without prior notice.
+EllaFlow AI reserves the right to update services, workflows, pricing structures, automation systems, platform features, and these terms at any time without prior notice.
 </p>
 
 <h2>Contact Information</h2>
 
 <p>
+For questions regarding these Terms of Service, contact:
+<br><br>
+
+EllaFlow AI
+<br>
+Boston, Massachusetts, USA
+<br><br>
+
 Email: brondsisjean180310@gmail.com
 <br>
 Phone: 857-930-0490
 </p>
 
 </div>
+
 </div>
 
 <footer>
-  <div style="
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-    margin-bottom:15px;
-  ">
-    <a href="privacy.html" style="color:#7c3aed; font-weight:bold;">
-      Privacy Policy
-    </a>
 
-    <a href="terms.html" style="color:#7c3aed; font-weight:bold;">
-      Terms of Service
-    </a>
+<div style="
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-bottom:15px;
+">
 
-    <a href="contact.html" style="color:#7c3aed; font-weight:bold;">
-      Contact
-    </a>
-  </div>
+<a href="privacy.html">
+Privacy Policy
+</a>
 
-  <p>
-    © 2025 EllaFlow AI | Automate Smarter. Serve Faster. Grow Stronger.
-  </p>
+<a href="terms.html">
+Terms of Service
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+<p style="margin-top:15px; color:#9ca3af;">
+AI automation systems, intelligent workflows, operational tools,
+and scalable business solutions designed for modern organizations.
+</p>
+
+<br>
+
+<p>
+© 2025 EllaFlow AI | Automate Smarter. Serve Faster. Grow Stronger.
+</p>
+
 </footer>
 
 </body>
