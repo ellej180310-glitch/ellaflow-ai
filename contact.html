@@ -54,9 +54,10 @@
     }
 
     .contact-info h1 {
-      font-size: 48px;
+      font-size: 50px;
       color: #111827;
       margin-bottom: 20px;
+      line-height: 1.1;
     }
 
     .contact-info h1 span {
@@ -102,6 +103,7 @@
     .hours p {
       color: #4b5563;
       font-size: 16px;
+      margin-bottom: 0;
     }
 
     .wide {
@@ -183,11 +185,58 @@
       transform: translateY(-2px);
     }
 
+    .map-section {
+      padding: 40px 8% 80px;
+    }
+
+    .map-section h2 {
+      font-size: 34px;
+      margin-bottom: 25px;
+      color: #111827;
+    }
+
+    .map-section h2 span {
+      color: #f97316;
+    }
+
+    .map-box {
+      overflow: hidden;
+      border-radius: 24px;
+      border: 2px solid #f97316;
+      box-shadow: 0 15px 45px rgba(124,58,237,0.15);
+      margin-bottom: 25px;
+    }
+
+    .business-card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid rgba(124,58,237,0.15);
+      box-shadow: 0 15px 40px rgba(124,58,237,0.10);
+    }
+
+    .business-card h3 {
+      color: #7c3aed;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    .business-card p {
+      margin-bottom: 8px;
+      color: #4b5563;
+    }
+
     footer {
       text-align: center;
-      padding: 28px 8%;
+      padding: 32px 8%;
       background: #111827;
       color: #d1d5db;
+    }
+
+    footer a {
+      color: #7c3aed;
+      font-weight: bold;
+      text-decoration: none;
     }
 
     @media (max-width: 900px) {
@@ -225,17 +274,17 @@
 
   <main class="contact-section">
     <div class="contact-info">
-      <h1>Get In <span>Touch</span></h1>
+      <h1>Let’s Build Smarter <span>Business Operations</span></h1>
+
       <p>
-        Ready to improve your business with AI, automation, and modern digital tools?
-        Contact EllaFlow AI to discuss websites, customer support automation, workflows,
-        dashboards, or custom business systems.
+        Contact EllaFlow AI to discuss AI automation, customer communication systems,
+        workflow optimization, dashboards, smart forms, internal tools, or custom business systems.
       </p>
 
       <div class="info-grid">
         <div class="info-card">
           <h3>Location</h3>
-          <p>118 Beacon St, Boston, MA USA 02116</p>
+          <p>Boston, Massachusetts</p>
         </div>
 
         <div class="info-card">
@@ -250,18 +299,18 @@
       </div>
 
       <div class="hours">
-        <h3>Availability</h3>
-        <p>Monday – Sunday: 24 hour</p>
+        <h3>Consultation Availability</h3>
+        <p>Monday – Sunday: Available by request</p>
         <br />
         <p>
-          Consultations are available for business websites, AI assistant setup,
-          automation planning, and custom digital solutions.
+          Consultations are available for AI assistants, automation planning,
+          workflow systems, dashboards, smart intake forms, and custom operational tools.
         </p>
       </div>
     </div>
 
     <div class="contact-form">
-      <h2>Send Us a Message</h2>
+      <h2>Tell Us What You Want to Automate</h2>
 
       <form id="contactForm">
         <input type="text" name="name" placeholder="Your Name" autocomplete="name" required />
@@ -269,111 +318,73 @@
         <input type="tel" name="phone" placeholder="Your Phone Number (Optional)" autocomplete="tel" />
 
         <select name="solution" required>
-          <option value="">Select Inquiry Type</option>
+          <option value="">Select Your Business Need</option>
           <option>AI Customer Assistant</option>
-          <option>Website Development</option>
-          <option>Business Automation</option>
+          <option>Workflow Automation</option>
+          <option>Smart Booking or Scheduling System</option>
+          <option>Lead Capture and Inquiry Automation</option>
           <option>Analytics Dashboard</option>
-          <option>Starter Plan</option>
-          <option>Professional Plan</option>
-          <option>Enterprise Consultation</option>
+          <option>Business Intake System</option>
+          <option>Operational Management Tool</option>
+          <option>Starter Digital Foundation</option>
+          <option>Professional Automation Plan</option>
+          <option>Enterprise Automation Consultation</option>
           <option>Other</option>
         </select>
 
-        <textarea name="message" placeholder="Your Message" required></textarea>
+        <textarea name="message" placeholder="Describe your business problem, workflow, or automation idea..." required></textarea>
 
-        <button type="submit">Send Message</button>
+        <button type="submit">Send Consultation Request</button>
       </form>
     </div>
   </main>
 
-  <section style="padding: 40px 8% 80px;">
-  <h2 style="
-    font-size: 34px;
-    margin-bottom: 25px;
-    color: #111827;
-  ">
-    Find <span style="color:#f97316;">Us</span>
-  </h2>
+  <section class="map-section">
+    <h2>Find <span>Us</span></h2>
 
-  <div style="
-    overflow: hidden;
-    border-radius: 24px;
-    border: 2px solid #f97316;
-    box-shadow: 0 15px 45px rgba(124,58,237,0.15);
-    margin-bottom: 25px;
-  ">
+    <div class="map-box">
+      <iframe
+        src="https://www.google.com/maps?q=Boston,Massachusetts&output=embed"
+        width="100%"
+        height="500"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
 
-    <iframe
-      src="https://www.google.com/maps?q=Boston,Massachusetts&output=embed"
-      width="100%"
-      height="500"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
+    <div class="business-card">
+      <h3>EllaFlow AI</h3>
 
-  </div>
+      <p>Boston, Massachusetts, USA</p>
+      <p>Phone: 857-930-0490</p>
+      <p>Email: brondsisjean180310@gmail.com</p>
 
-  <div style="
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid rgba(124,58,237,0.15);
-    box-shadow: 0 15px 40px rgba(124,58,237,0.10);
-  ">
-    <h3 style="
-      color:#7c3aed;
+      <p style="margin-top:20px;">
+        EllaFlow AI helps businesses modernize operations through AI automation,
+        intelligent workflows, customer communication systems, dashboards,
+        smart intake forms, and custom operational tools.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div style="
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      flex-wrap:wrap;
       margin-bottom:15px;
-      font-size:28px;
     ">
-      EllaFlow AI
-    </h3>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-    <p style="margin-bottom:8px; color:#4b5563;">
-      Massachusetts, USA
+    <p>
+      © 2025 EllaFlow AI | Automate Smarter. Serve Faster. Grow Stronger.
     </p>
-
-    <p style="margin-bottom:8px; color:#4b5563;">
-      Phone: 857-930-0490
-    </p>
-
-    <p style="margin-bottom:8px; color:#4b5563;">
-      Email: brondsisjean180310@gmail.com
-    </p>
-
-    <p style="margin-top:20px; color:#4b5563;">
-      Helping businesses modernize operations through AI automation,
-      intelligent workflows, customer support systems, and modern web solutions.
-    </p>
-  </div>
-</section>
-
-<footer>
-  <div style="
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-    margin-bottom:15px;
-  ">
-    <a href="privacy.html" style="color:#7c3aed; font-weight:bold;">
-      Privacy Policy
-    </a>
-
-    <a href="terms.html" style="color:#7c3aed; font-weight:bold;">
-      Terms of Service
-    </a>
-
-    <a href="contact.html" style="color:#7c3aed; font-weight:bold;">
-      Contact
-    </a>
-  </div>
-
-  <p>
-    © 2025 EllaFlow AI | Automate Smarter. Serve Faster. Grow Stronger.
-  </p>
-</footer>
+  </footer>
 
   <script>
     const contactForm = document.getElementById("contactForm");
